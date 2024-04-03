@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import com.restapi.EventsFinderRestAPI.Model.EventData;
 @Repository
-public interface EventRepository extends JpaRepository<EventData,Serializable> {
+public interface EventRepository extends JpaRepository<EventData,Long> {
 	List<EventData> findByDateBetween(LocalDate startDate,LocalDate endDate);
 }
