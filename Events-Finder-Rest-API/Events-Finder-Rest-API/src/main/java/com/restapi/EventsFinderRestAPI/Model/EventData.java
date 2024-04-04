@@ -16,7 +16,7 @@ public class EventData {
 	@Id
     @Column(name = "id")
     private Long id;
-	@Column(name = "evenetName")
+	@Column(name = "eventName")
 	private String eventName;
 	@Column(name = "cityName")
 	private String cityName;
