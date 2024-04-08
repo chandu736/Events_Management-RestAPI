@@ -2,35 +2,27 @@ package com.restapi.EventsFinderRestAPI.Model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-
-import org.hibernate.annotations.Immutable;
-
-import jakarta.persistence.Column;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
 @Entity
-@Table(name = "events_data")
-@Immutable
 public class EventData {
+	
 	@Id
-    @Column(name = "id")
-    private Long id;
-	@Column(name = "eventName")
+	private Long id;
+	@JsonProperty
 	private String eventName;
-	@Column(name = "cityName")
+	@JsonProperty
 	private String cityName;
-	@Column(name = "date")
+	@JsonProperty
 	private LocalDate date;
-	@Column(name = "time")
+	@JsonProperty
 	private LocalTime time;
-	@Column(name = "latitude")
+	@JsonProperty
 	private Double latitude;
-	@Column(name = "longitude")
+	@JsonProperty
 	private Double longitude;
-	public EventData() {
-		
-	}
 	public EventData(String eventName, String cityName, LocalDate date, LocalTime time, Double latitude,
 			Double longitude) {
 		super();
@@ -40,6 +32,17 @@ public class EventData {
 		this.time = time;
 		this.latitude = latitude;
 		this.longitude = longitude;
+	}
+	public EventData(String eventName, String cityName, LocalDate date, Double latitude, Double longitude) {
+		super();
+		this.eventName = eventName;
+		this.cityName = cityName;
+		this.date = date;
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
+	public EventData() {
+		// TODO Auto-generated constructor stub
 	}
 	public String getEventName() {
 		return eventName;
