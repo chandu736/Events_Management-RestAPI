@@ -1,27 +1,50 @@
 package com.restapi.EventsFinderRestAPI.Model;
 
-import java.time.LocalDate;
+import java.util.List;
 
-public class EventRequestDTO {
-	private Double userLatitude;
-	private Double userLongitude;
-	private LocalDate date;
-	public Double getUserLatitude() {
-		return userLatitude;
+public class PaginatedEventResponseDTO {
+	
+	private List<EventResponseDTO> events;
+	private int page;
+	private int pageSize;
+	private int totalEvents;
+	private int totalPages;
+	public List<EventResponseDTO> getEvents() {
+		return events;
 	}
-	public void setUserLatitude(Double userLatitude) {
-		this.userLatitude = userLatitude;
+	public void setEvents(List<EventResponseDTO> events) {
+		this.events = events;
 	}
-	public Double getUserLongitude() {
-		return userLongitude;
+	public int getPage() {
+		return page;
 	}
-	public void setUserLongitude(Double userLongitude) {
-		this.userLongitude = userLongitude;
+	public void setPage(int page) {
+		this.page = page;
 	}
-	public LocalDate getDate() {
-		return date;
+	public int getPageSize() {
+		return pageSize;
 	}
-	public void setDate(LocalDate date) {
-		this.date = date;
+	public void setPageSize(int pageSize) {
+		this.pageSize = pageSize;
+	}
+	public int getTotalEvents() {
+		return totalEvents;
+	}
+	public void setTotalEvents(int totalEvents) {
+		this.totalEvents = totalEvents;
+	}
+	public int getTotalPages() {
+		return totalPages;
+	}
+	public void setTotalPages(int totalPages) {
+		this.totalPages = totalPages;
+	}
+	public PaginatedEventResponseDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		return "PaginatedEventResponseDTO [events=" + events + ", page=" + page + ", pageSize=" + pageSize
+				+ ", totalEvents=" + totalEvents + ", totalPages=" + totalPages + "]";
 	}
 }
