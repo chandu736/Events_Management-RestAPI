@@ -51,3 +51,85 @@ This project is a RESTful service for finding and managing events data based on 
 ## API Testing with Postman
 
 API testing was performed using Postman to ensure the correctness and reliability of the endpoints. A collection of API requests along with sample request payloads and expected responses is available for reference.
+
+### API Response Format:
+The API response is in JSON format and has the following structure:
+```json
+{
+    "events": [
+        {
+            "eventName": "Structure support choice",
+            "cityName": "Fryland",
+            "date": "2024-03-15",
+            "weather": "Rainy 25C",
+            "distance": 8910.23984708894
+        },
+        {
+            "eventName": "Party development available",
+            "cityName": "Port Alexander",
+            "date": "2024-03-15",
+            "weather": "Windy 27C",
+            "distance": 12710.135679967512
+        },
+        {
+            "eventName": "Air quickly home",
+            "cityName": "Lawrenceview",
+            "date": "2024-03-16",
+            "weather": "Sunny 12C",
+            "distance": 12674.554608508966
+        },
+        {
+            "eventName": "Of ask open",
+            "cityName": "New Andrew",
+            "date": "2024-03-16",
+            "weather": "Rainy 3C",
+            "distance": 15346.670405594576
+        },
+        {
+            "eventName": "Create success",
+            "cityName": "New Susanmouth",
+            "date": "2024-03-16",
+            "weather": "Sunny 5C",
+            "distance": 8301.79106015074
+        },
+        {
+            "eventName": "Phone city",
+            "cityName": "Riveraberg",
+            "date": "2024-03-16",
+            "weather": "Rainy 16C",
+            "distance": 16078.589189816212
+        },
+        {
+            "eventName": "Glass although",
+            "cityName": "Kathleenfort",
+            "date": "2024-03-17",
+            "weather": "Windy 1C",
+            "distance": 10573.065389972637
+        },
+        {
+            "eventName": "Political check five",
+            "cityName": "Lake Timothymouth",
+            "date": "2024-03-17",
+            "weather": "Snowy 12C",
+            "distance": 14210.540682330571
+        },
+        {
+            "eventName": "Democrat seat nor",
+            "cityName": "South Mark",
+            "date": "2024-03-18",
+            "weather": "Rainy 32C",
+            "distance": 13743.41782006343
+        },
+        {
+            "eventName": "Assume by",
+            "cityName": "East Brandyfort",
+            "date": "2024-03-18",
+            "weather": "Rainy -1C",
+            "distance": 16561.73323786461
+        }
+    ],
+    "page": 1,
+    "pageSize": 10,
+    "totalEvents": 44,
+    "totalPages": 5
+}
