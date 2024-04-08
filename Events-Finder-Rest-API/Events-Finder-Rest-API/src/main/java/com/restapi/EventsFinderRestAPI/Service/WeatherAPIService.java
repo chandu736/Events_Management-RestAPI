@@ -1,9 +1,9 @@
 package com.restapi.EventsFinderRestAPI.Service;
 
 import java.time.LocalDate;
-
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
 @Service
 public class WeatherAPIService {
 	
@@ -12,7 +12,21 @@ public class WeatherAPIService {
 	
 	public String getWeatherInfo(String city, LocalDate date) {
 		RestTemplate restTemplate=new RestTemplate();
-		String apiUrl=WEATHER_API_URL+"?Code="+WEATHER_API_KEY+"&city="+city+"&date="+date+date.toString();
-		return restTemplate.getForObject(apiUrl,String.class);
+		String formattedDate = date.toString();
+		String apiUrl=WEATHER_API_URL+"?code="+WEATHER_API_KEY+"&city="+city+"&date="+formattedDate;
+		WeatherResponse weatherResponse = restTemplate.getForObject(apiUrl, WeatherResponse.class);
+		return weatherResponse.getWeather();
 	}
+	private static class WeatherResponse {
+        private String weather;
+
+        public String getWeather() {
+            return weather;
+        }
+
+        @SuppressWarnings("unused")
+		public void setWeather(String weather) {
+            this.weather = weather;
+        }
+    }
 }
