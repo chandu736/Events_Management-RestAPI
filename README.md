@@ -19,7 +19,7 @@ This project is a RESTful service for finding and managing events data based on 
 
 - **Choice of Tech Stack:** Spring Boot was chosen for its rapid development capabilities and easy configuration. MySQL was chosen for its reliability and compatibility with Spring Boot.
 - **Database Schema Design:** The database schema was designed to efficiently store and retrieve event data based on location and date. Tables were normalized to reduce redundancy and improve data integrity.
-- **Handling Pagination:** Pagination was implemented to efficiently handle large datasets by fetching only a subset of data at a time. This improves application performance and user experience. Pagination parameters such as page number and page size are accepted as query parameters in API requests.
+- **Handling Pagination:** Pagination was implemented to efficiently handle large datasets by fetching only a subset of data at a time. This improves application performance and user experience. Pagination parameter that is page number accepted as query parameter in API requests.
 - **Error Handling:** Proper error handling mechanisms were implemented throughout the application to provide meaningful error messages to users. Custom exception classes were created to handle specific error scenarios, such as invalid input and resource not found.
 
 ## Setup and Run Instructions
@@ -28,13 +28,20 @@ This project is a RESTful service for finding and managing events data based on 
 - Java JDK (22)
 - Maven (version 4.0.0)
 - MySQL (8.0.36)
+- Eclipse IDE
 
 ### Steps to Setup:
-1. Clone this repository: `https://github.com/chandu736/Events_Management-RestAPI.git`
-2. Navigate to the project directory: `cd Events_Management-RestAPI`
-3. Open `src/main/resources/application.properties` and configure the MySQL database connection settings, including URL, username, and password.
-4. Build the project using Maven: `mvn clean install`
-5. Run the application: `java -jar target/Events_Management-RestAPI.jar`
+1. Clone this repository: `git clone https://github.com/chandu736/Events_Management-RestAPI.git`
+2. Open Eclipse IDE.
+3. Click on `File` -> `Import`.
+4. Select `Existing Maven Projects`.
+5. Browse to the directory where you cloned the repository and select the project.
+6. Click `Finish` to import the project into Eclipse.
+
+### Run Instructions:
+1. Right-click on the project in the `Package Explorer`.
+2. Select `Run As` -> `Spring Boot App`.
+3. The application will start running, and you can access the API endpoints as described below.
 
 ## API Endpoints
 
